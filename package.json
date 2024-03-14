@@ -50,12 +50,14 @@
             }
         }
     },
+    "dependencies": {
+        "which": "4.0.0"
+    },
     "devDependencies": {
         "@types/node": "^18",
         "@types/vscode": "1.86.0",
         "@types/which": "^3.0.3",
-        "typescript": "^5.3.3",
-        "which": "^4.0.0"
+        "typescript": "^5.3.3"
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

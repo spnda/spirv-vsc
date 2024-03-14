@@ -17,7 +17,7 @@ export class EditorProvider implements vscode.CustomReadonlyEditorProvider {
         doc.uri = uri;
 
         let disPath = vscode.workspace.getConfiguration().get('spirvtools.disassemblerLocation');
-        if (disPath === undefined || !(typeof disPath === 'string') || disPath.length == 0) {
+        if (disPath === undefined || disPath === null || !(typeof disPath === 'string') || disPath.length == 0) {
             if (fallbackDisassemblerPath != null) {
                 console.log("Using fallback disassembler path");
                 disPath = fallbackDisassemblerPath;
